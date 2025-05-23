@@ -60,16 +60,16 @@ function Sidebar() {
           </div>
 
           <Link
-            href="/jobs"
+            href="/dashboard/jobs"
             className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg group ${
-              pathname === "/jobs"
+              pathname.includes("/jobs")
                 ? "text-blue-600 bg-blue-50"
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
             <JobIcon
               className={`w-6 h-6 ${
-                pathname === "/jobs"
+                pathname.includes("/jobs")
                   ? "text-blue-600"
                   : "text-gray-500 group-hover:text-gray-500"
               }`}
@@ -78,16 +78,16 @@ function Sidebar() {
           </Link>
 
           <Link
-            href="/companies"
+            href="/dashboard/companies"
             className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg group ${
-              pathname === "/companies"
+              pathname.includes("/companies")
                 ? "text-blue-600 bg-blue-50"
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
             <CompanyIcon
               className={`w-6 h-6 ${
-                pathname === "/companies"
+                pathname.includes("/companies")
                   ? "text-blue-600"
                   : "text-gray-500 group-hover:text-gray-500"
               }`}
@@ -96,16 +96,16 @@ function Sidebar() {
           </Link>
 
           <Link
-            href="/talents"
+            href="/dashboard/talents"
             className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg group ${
-              pathname === "/talents"
+              pathname === "/dashboard/talents"
                 ? "text-blue-600 bg-blue-50"
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
             <TalentIcon
               className={`w-6 h-6 ${
-                pathname === "/talents"
+                pathname === "/dashboard/talents"
                   ? "text-blue-600"
                   : "text-gray-500 group-hover:text-gray-500"
               }`}
@@ -165,7 +165,7 @@ function Sidebar() {
               <div className="absolute left-[-12px] top-1/2 w-4 h-px bg-gray-300" />
               <span
                 className={`${
-                  pathname.includes("/talents")
+                  pathname === "/dashboard/elite/talents"
                     ? "text-blue-600"
                     : "text-gray-700 hover:text-blue-600"
                 }`}

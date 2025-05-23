@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
       "images.pexels.com",
       "www.pexels.com",
       "images.pexels.com",
+      "cdn.brandfetch.io",
+      "asset.brandfetch.io"
+
     ],
   },
   /* config options here */

@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex bg-white">
+    <div className="flex bg-white text-gray-800">
       <Sidebar />
       {children}
     </div>
