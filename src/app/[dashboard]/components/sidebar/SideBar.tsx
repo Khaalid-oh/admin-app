@@ -98,14 +98,14 @@ function Sidebar() {
           <Link
             href="/dashboard/talents"
             className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg group ${
-              pathname === "/dashboard/talents"
+              pathname.includes("/dashboard/talents")
                 ? "text-blue-600 bg-blue-50"
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
             <TalentIcon
               className={`w-6 h-6 ${
-                pathname === "/dashboard/talents"
+                pathname.includes("/dashboard/talents")
                   ? "text-blue-600"
                   : "text-gray-500 group-hover:text-gray-500"
               }`}
@@ -114,7 +114,7 @@ function Sidebar() {
           </Link>
 
           <Link
-            href="/elite"
+            href="/dashboard/elite"
             className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg group ${
               pathname.includes("/elite")
                 ? "text-blue-600 bg-blue-50"
@@ -140,14 +140,15 @@ function Sidebar() {
 
             {/* Applications */}
             <Link
-              href="/elite"
+              href="/dashboard/elite"
               className="relative flex items-center px-3 py-2 text-sm rounded-lg group"
             >
               {/* Horizontal line */}
               <div className="absolute left-[-12px] top-1/2 w-4 h-px bg-gray-300" />
               <span
                 className={`${
-                  pathname === "/elite" || pathname.includes("/applications")
+                  pathname === "/dashboard/elite" ||
+                  pathname.includes("/applications")
                     ? "text-blue-600"
                     : "text-gray-700 hover:text-blue-600"
                 }`}
@@ -158,14 +159,14 @@ function Sidebar() {
 
             {/* Talents */}
             <Link
-              href="/elite/talents"
+              href="/dashboard/elite/talents"
               className="relative flex items-center px-3 py-2 text-sm rounded-lg group"
             >
               {/* Horizontal line */}
               <div className="absolute left-[-12px] top-1/2 w-4 h-px bg-gray-300" />
               <span
                 className={`${
-                  pathname === "/dashboard/elite/talents"
+                  pathname.includes("/dashboard/elite/talents")
                     ? "text-blue-600"
                     : "text-gray-700 hover:text-blue-600"
                 }`}
@@ -176,14 +177,14 @@ function Sidebar() {
 
             {/* Briefs */}
             <Link
-              href="/elite/briefs"
+              href="/dashboard/elite/briefs"
               className="relative flex items-center px-3 py-2 text-sm rounded-lg group"
             >
               {/* Horizontal line */}
               <div className="absolute left-[-12px] top-1/2 w-4 h-px bg-gray-300" />
               <span
                 className={`${
-                  pathname.includes("/briefs")
+                  pathname.includes("/dashboard/elite/briefs")
                     ? "text-blue-600"
                     : "text-gray-700 hover:text-blue-600"
                 }`}
@@ -194,14 +195,14 @@ function Sidebar() {
 
             {/* Projects */}
             <Link
-              href="/elite/projects"
+              href="/dashboard/elite/projects"
               className="relative flex items-center px-3 py-2 text-sm rounded-lg group"
             >
               {/* Horizontal line */}
               <div className="absolute left-[-12px] top-1/2 w-4 h-px bg-gray-300" />
               <span
                 className={`${
-                  pathname.includes("/projects")
+                  pathname.includes("/dashboard/elite/projects")
                     ? "text-blue-600"
                     : "text-gray-700 hover:text-blue-600"
                 }`}
@@ -212,14 +213,14 @@ function Sidebar() {
 
             {/* Settings */}
             <Link
-              href="/elite/settings"
+              href="/dashboard/elite/settings"
               className="relative flex items-center px-3 py-2 text-sm rounded-lg group"
             >
               {/* Horizontal line */}
               <div className="absolute left-[-12px] top-1/2 w-4 h-px bg-gray-300" />
               <span
                 className={`${
-                  pathname === "/elite/settings"
+                  pathname === "/dashboard/elite/settings"
                     ? "text-blue-600"
                     : "text-gray-700 hover:text-blue-600"
                 }`}

@@ -1,6 +1,12 @@
 // import {Talent} from "../../page";
 
-import { Company, Job, JobPreviewDetails, Metric } from "../types/metrics";
+import {
+  Company,
+  Job,
+  JobPreviewDetails,
+  Metric,
+  Talent,
+} from "../types/metrics";
 import {
   UsersIcon,
   UserCheckIcon,
@@ -706,3 +712,54 @@ export const mockTalents: Talent[] = [
     jobsApplication: 1,
   },
 ];
+
+export const mockTalentProfile = {
+  id: "A271008",
+  name: "Adeniji Kamilat",
+  avatarUrl: "https://randomuser.me/api/portraits/women/1.jpg",
+  verified: true,
+  tested: true,
+  personal: {
+    fullName: "Adeniji Kamilat",
+    dateOfBirth: "Sister",
+    country: "Nigeria",
+    countryFlag: "🇳🇬",
+  },
+  address: {
+    address: "41 Industrial Avenue",
+    city: "Lagos",
+    country: "Nigeria",
+    countryFlag: "🇳🇬",
+  },
+  work: {
+    fullName: "Adeniji Kamilat",
+    relationship: "Sister",
+    email: "ahmedfelicia@yahoo.com",
+    phone: "+234 8185654614",
+    responsibility: [
+      "Consulting with clients to understand their goals",
+      "Explaining user research results to internal and external stakeholders.",
+      "Developing personas and usage scenarios.",
+      "Conducting usability testing.",
+      "Creating wireframes, storyboards, sitemaps and screen flows.",
+    ],
+    projectDescription:
+      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+  },
+  education: {
+    school: "University of Lagos",
+    course: "Accounting",
+    startDate: "January 2020",
+    endDate: "April 2020",
+    degree: "Bachelors",
+  },
+  referee: {
+    title: "Mr",
+    firstName: "Shanks",
+    lastName: "Gold",
+    email: "shanks@gmail.com",
+    phone: "+234189670590",
+    company: "Google",
+    knownFor: "4 years",
+  },
+};

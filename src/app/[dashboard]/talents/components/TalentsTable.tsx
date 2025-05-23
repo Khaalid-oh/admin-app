@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Company } from "../../components/types/metrics";
 import Image from "next/image";
 import { Talent } from "../../components/types/metrics";
+import Link from "next/link";
 
 interface TalentsTableProps {
   talents: Talent[];
@@ -134,14 +135,14 @@ export const talentsColumns = [
       <div className="flex items-center gap-2">
         {talent.avatarUrl ? (
           <Image
-            width={24}
-            height={24}
+            width={36}
+            height={36}
             src={talent.avatarUrl}
             alt={talent.name}
-            className="w-6 h-6 rounded-full"
+            className="w-9 h-9 rounded-full"
           />
         ) : (
-          <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold text-gray-500">
+          <div className="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold text-gray-500">
             {talent.name
               .split(" ")
               .map((n) => n[0])
@@ -188,8 +189,10 @@ export const talentsColumns = [
   {
     id: "actions",
     header: "",
-    render: () => (
-      <button className="text-blue-500 hover:underline">View</button>
+    render: (talent: Talent) => (
+      <Link href={`/dashboard/talents/${talent.id}`}>
+        <button className="text-blue-500 hover:underline">View</button>
+      </Link>
     ),
   },
 ];
